@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "fastsaas-cli"
+version = "0.1.0"
+description = "CLI for fastsaas"
+authors = ["Brandon Braner <brandon.braner@gmail.com>"]
+readme = "README.md"
+packages = [{ include = "cli" }]
+
+[tool.poetry.dependencies]
+python = "^3.11"
+ruff = "^0.0.284"
+lagom = "^2.4.1"
+pydantic-settings = "^2.0.2"
+typer = { extras = ["all"], version = "^0.9.0" }
+pip = "^23.2.1"
+install = "^1.3.5"
+rich = { extras = ["jupyter"], version = "^13.5.2" }
+shellingham = "^1.5.3"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^6.2.5"
+black = "^23.7.0"
+
+[tool.ruff]
+line-length = 140
+ignore = ["C"]
+
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
